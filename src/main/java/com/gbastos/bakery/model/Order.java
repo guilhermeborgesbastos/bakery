@@ -24,4 +24,9 @@ public class Order {
   public void setOrder(Map<String, Product> order) {
     this.order = order;
   }
+
+  @Override
+  public String toString() {
+    return "Order [order=" + order + "]";
+  }
 }
