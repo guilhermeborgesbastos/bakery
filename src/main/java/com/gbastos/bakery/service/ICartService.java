@@ -9,10 +9,10 @@ public interface ICartService {
    * Adds the product to the cart, in case it already exists in the cart, it increases its quantity,
    * otherwise, it basically adds it to the cart.
    *
-   * @param quantity product's quantity
+   * @param amount product's quantity
    * @param product
    */
-  void addProduct(Integer quantity, Product product);
+  void addProduct(Integer amount, Product product);
 
   /**
    * Retrieves the cart items copy.

@@ -46,7 +46,7 @@ public class PackTest extends AbstractDataLoader {
     IProductService productService = new ProductService(product);
 
     final Map<Pack, Integer> packetsForTotalQuantity =
-        productService.retrievePacksByQuantity(amount);
+        productService.retrievePacksByAmount(amount);
 
     assertEquals(expected, productService.calculateSumOfPackQuantity(packetsForTotalQuantity));
   }

@@ -3,7 +3,7 @@ package com.gbastos.bakery.service;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import com.gbastos.bakery.exception.InvalidQuantityException;
+import com.gbastos.bakery.exception.InvalidAmountException;
 import com.gbastos.bakery.exception.NullProductException;
 import com.gbastos.bakery.model.Cart;
 import com.gbastos.bakery.model.Pack;
@@ -19,7 +19,7 @@ public class CartService implements ICartService {
 
   private void validateInputs(int quantity, Product product) {
     if (quantity < 1) {
-      throw new InvalidQuantityException(quantity);
+      throw new InvalidAmountException(quantity);
     } else if (product == null) {
       throw new NullProductException();
     }
@@ -37,7 +37,7 @@ public class CartService implements ICartService {
       Product product = entry.getKey();
       IProductService productService = new ProductService(product);
       Map<Pack, Integer> packQuantity = productService
-          .retrievePacksByQuantity(entry.getValue());
+          .retrievePacksByAmount(entry.getValue());
       total += productService.calculateTotalCostOfPacks(packQuantity);
     }
     return total;

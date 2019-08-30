@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.IntStream;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import com.gbastos.bakery.exception.InvalidQuantityException;
+import com.gbastos.bakery.exception.InvalidAmountException;
 import com.gbastos.bakery.exception.NullProductException;
 import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.CartService;
@@ -86,9 +86,9 @@ public class CartServiceTest {
     ICartService cartService = new CartService();
   
     // Then
-    assertThrows(InvalidQuantityException.class, () -> cartService.addProduct(0, product));
-    assertThrows(InvalidQuantityException.class, () -> cartService.addProduct(-1, product));
-    assertThrows(InvalidQuantityException.class, () -> cartService.addProduct(-5, product));
+    assertThrows(InvalidAmountException.class, () -> cartService.addProduct(0, product));
+    assertThrows(InvalidAmountException.class, () -> cartService.addProduct(-1, product));
+    assertThrows(InvalidAmountException.class, () -> cartService.addProduct(-5, product));
   }
 
   /**

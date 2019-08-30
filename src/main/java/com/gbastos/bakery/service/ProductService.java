@@ -142,7 +142,7 @@ public class ProductService implements IProductService {
   }
 
   @Override
-  public Map<Pack, Integer> retrievePacksByQuantity(int quantity) {
+  public Map<Pack, Integer> retrievePacksByAmount(int quantity) {
     validateRetrievePacksByQuantityInput(quantity);
 
     Map<Pack, Integer> minPackets = calculatePackDivisionIntoSmallerPacks(0, quantity,
