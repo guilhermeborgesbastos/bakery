@@ -1,7 +1,7 @@
 package com.gbastos.bakery.model;
 
-import com.gbastos.bakery.exception.InvalidPackPriceException;
 import com.gbastos.bakery.exception.InvalidPackAmountException;
+import com.gbastos.bakery.exception.InvalidPackPriceException;
 
 /**
  * An Anemic data container for the package configuration of each @Product. Basically, each product
@@ -43,6 +43,11 @@ public class Pack implements Comparable<Pack> {
 
   public void setPrice(Double price) {
     this.price = price;
+  }
+
+  @Override
+  public String toString() {
+    return "Pack [amount=" + amount + ", price=" + price + "]";
   }
 
   @Override

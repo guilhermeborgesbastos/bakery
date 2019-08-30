@@ -3,7 +3,7 @@ package com.gbastos.bakery.service;
 import java.util.HashMap;
 import java.util.Map;
 import com.gbastos.bakery.exception.ImpossiblePackDivisionException;
-import com.gbastos.bakery.exception.InvalidQuantityException;
+import com.gbastos.bakery.exception.InvalidAmountException;
 import com.gbastos.bakery.exception.NoPacksFound;
 import com.gbastos.bakery.exception.PackAlreadyExists;
 import com.gbastos.bakery.exception.PackCannotBeNull;
@@ -28,7 +28,7 @@ public class ProductService implements IProductService {
 
   private void validateRetrievePacksByQuantityInput(Integer quantity) {
     if (quantity <= 0) {
-      throw new InvalidQuantityException(quantity);
+      throw new InvalidAmountException(quantity);
     } else if (this.product.getPacks().isEmpty()) {
       throw new NoPacksFound(product);
     }
