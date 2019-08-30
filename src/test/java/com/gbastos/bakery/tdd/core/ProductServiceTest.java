@@ -1,6 +1,5 @@
 package com.gbastos.bakery.tdd.core;
 
-import static com.gbastos.bakery.tdd.service.Tests.getDummyProducts;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -29,7 +28,7 @@ public class ProductServiceTest {
    */
   @Test
   void whenNullIsAddedAsPack_thenThrow_PackCannotBeNull() {
-    assertThrows(PackCannotBeNull.class, () -> new ProductService(getDummyProducts(1)[0]).addPack(null));
+    assertThrows(PackCannotBeNull.class, () -> new ProductService(dataLoader.getProducts().get(0)).addPack(null));
   }
 
   /**
