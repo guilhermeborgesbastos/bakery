@@ -19,9 +19,8 @@ import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.IProductService;
 import com.gbastos.bakery.service.ProductService;
 import com.gbastos.bakery.tdd.ProductDataLoader;
-import com.gbastos.bakery.tdd.loader.AbstractDataLoader;
 
-public class PackTest extends AbstractDataLoader {
+public class PackTest  {
 
   private static final ProductDataLoader productDataLoader = ProductDataLoader.getInstance();
 
