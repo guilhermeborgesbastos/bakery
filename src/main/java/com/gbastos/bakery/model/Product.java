@@ -46,6 +46,11 @@ public class Product {
     this.packs = packs;
   }
 
+  @Override
+  public String toString() {
+    return "Product [name=" + name + ", code=" + code + ", packs=" + packs + "]";
+  }
+
   /**
    * Products with same code are considered equals.
    *
