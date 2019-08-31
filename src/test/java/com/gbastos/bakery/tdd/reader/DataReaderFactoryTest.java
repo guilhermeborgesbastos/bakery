@@ -26,7 +26,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
   @Test
   void whenDataReaderFactoryRetrievesAllProducts() {
     // Given
-    TextDatasetReader readerFactory = DataReaderFactory.getDataReaderForFile(DATASET_FILE_NAME);
+    TextDatasetReader readerFactory = DataReaderFactory.retrieveDataReaderByFile(DATASET_FILE_NAME);
     readerFactory.read();
 
     // When
@@ -43,7 +43,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
   @Test
   void whenDataReaderFactoryRetrievesAllPacks() {
     // Given
-    TextDatasetReader readerFactory = DataReaderFactory.getDataReaderForFile(DATASET_FILE_NAME);
+    TextDatasetReader readerFactory = DataReaderFactory.retrieveDataReaderByFile(DATASET_FILE_NAME);
     readerFactory.read();
     Set<Product> products = readerFactory.getAllProducts();
     List<Pack> productsPacks = new ArrayList<Pack>();
@@ -60,7 +60,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
    */
   @Test
   void whenValidDatasetFileIsUsed_then_ReturnsTextDatasetReader() {
-    assertTrue(DataReaderFactory.getDataReaderForFile(DATASET_FILE_NAME) instanceof TextDatasetReader);
+    assertTrue(DataReaderFactory.retrieveDataReaderByFile(DATASET_FILE_NAME) instanceof TextDatasetReader);
   }
 
   // EXCEPTIONS TESTS
@@ -70,7 +70,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
    */
   @Test
   void whenDatasetFileDoesNotExist_thenThrows_DatasetFileNotFoundException() {
-    assertThrows(DatasetFileNotFoundException.class, () -> DataReaderFactory.getDataReaderForFile("Data-File-Not-Exists.txt"));
+    assertThrows(DatasetFileNotFoundException.class, () -> DataReaderFactory.retrieveDataReaderByFile("Data-File-Not-Exists.txt"));
   }
 
   /**
@@ -78,7 +78,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
    */
   @Test
   void whenDatasetFilePathIsNull_thenThrows_DataFilePathIsNull() {
-    assertThrows(DatasetFilePathIsNullException.class, () -> DataReaderFactory.getDataReaderForFile(null));
+    assertThrows(DatasetFilePathIsNullException.class, () -> DataReaderFactory.retrieveDataReaderByFile(null));
   }
 
   /**
@@ -86,7 +86,7 @@ public class DataReaderFactoryTest extends AbstractDataset {
    */
   @Test
   void whenDatasetFilePathIsEmpty_thenThrows_DatasetFilePathIsEmpty() {
-    assertThrows(DatasetFilePathIsEmptyException.class, () -> DataReaderFactory.getDataReaderForFile(" "));
+    assertThrows(DatasetFilePathIsEmptyException.class, () -> DataReaderFactory.retrieveDataReaderByFile(" "));
   }
 
   /**
@@ -95,6 +95,6 @@ public class DataReaderFactoryTest extends AbstractDataset {
   @Test
   void whenDatasetFileTypeIsNotSupported_thenThrows_NotSupportedDatasetTypeException() {
     assertThrows(NotSupportedDatasetTypeException.class,
-        () -> DataReaderFactory.getDataReaderForFile("invalid-data-reader-file.csv"));
+        () -> DataReaderFactory.retrieveDataReaderByFile("invalid-data-reader-file.csv"));
   }
 }

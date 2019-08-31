@@ -22,7 +22,7 @@ public class AbstractDataset {
    * @return the order service
    */
   protected static IOrderService loadDataset() {
-    TextDatasetReader dataReader = DataReaderFactory.getDataReaderForFile(DATASET_FILE_NAME);
+    TextDatasetReader dataReader = DataReaderFactory.retrieveDataReaderByFile(DATASET_FILE_NAME);
     ProductsFeeder textFileProductsLoader = new ProductsFeeder(dataReader);
     return textFileProductsLoader.loadProducts();
   }
