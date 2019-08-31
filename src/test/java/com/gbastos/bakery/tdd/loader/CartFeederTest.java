@@ -1,6 +1,5 @@
 package com.gbastos.bakery.tdd.loader;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -47,7 +46,7 @@ public class CartFeederTest extends AbstractDataset {
 
     // Then
     assertNotNull(cartService);
-    assertFalse(cartService.isEmpty());
+    assertEquals(false, cartService.isEmpty());
     assertEquals(expectedCartItemsSize, cartService.retrieveCartItems().size());
     assertEquals(expectedCartTotal, cartService.calculateItemsTotal());
   }
