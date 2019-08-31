@@ -16,6 +16,12 @@ public class AbstractDataset {
   protected static final String DATASET_FILE_NAME = "test-dataset.txt";
   protected static final String DATASET_EMPTY_FILE = "test-empty-dataset.txt";
 
+  // Product Code Constants
+  protected static final String CPK = "CPK";
+  protected static final String MB11 = "MB11";
+  protected static final String CF = "CF";
+  protected static final String VS5 = "VS5";
+
   /**
    * Loads the dataset from a resource file.
    *
