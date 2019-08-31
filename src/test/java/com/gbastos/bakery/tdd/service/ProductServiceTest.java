@@ -1,4 +1,4 @@
-package com.gbastos.bakery.tdd.core;
+package com.gbastos.bakery.tdd.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

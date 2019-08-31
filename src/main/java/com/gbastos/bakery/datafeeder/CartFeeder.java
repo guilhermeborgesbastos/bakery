@@ -1,4 +1,4 @@
-package com.gbastos.bakery.dataloader;
+package com.gbastos.bakery.datafeeder;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.gbastos.bakery.dataloader;
+package com.gbastos.bakery.datafeeder;
 
 import com.gbastos.bakery.exception.DataReaderIsNull;
 import com.gbastos.bakery.reader.TextDatasetReader;

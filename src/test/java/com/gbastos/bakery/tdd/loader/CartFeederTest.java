@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import com.gbastos.bakery.dataloader.CartFeeder;
+import com.gbastos.bakery.datafeeder.CartFeeder;
 import com.gbastos.bakery.exception.CartFeederCreatedWithNullArguments;
 import com.gbastos.bakery.service.ICartService;
 import com.gbastos.bakery.service.OrderService;
