@@ -32,13 +32,12 @@ public class InvoicePrinter {
   private void printProductResume(Product product, Integer amount) {
     IProductService productSevice = new ProductService(product);
     Map<Pack, Integer> packs = productSevice.retrievePacksByAmount(amount);
-    
     writer.printf(PRODUCT_PRINT_FORMAT, amount, product.getCode(), productSevice.calculateTotalCostOfPacks(packs));
-    
+
     packs.entrySet().stream().filter(entry -> entry.getValue() > 0)
-      .sorted(this::comparePackagesByPackSizeDescending)
-      .forEach(entry -> writer.printf(PACK_PRINT_FORMAT, entry.getValue(),
-          entry.getKey().getAmount(), entry.getKey().getPrice()));
+    .sorted(this::comparePackagesByPackSizeDescending)
+    .forEach(entry -> writer.printf(PACK_PRINT_FORMAT, entry.getValue(),
+        entry.getKey().getAmount(), entry.getKey().getPrice()));
     writer.flush();
   }
 
