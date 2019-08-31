@@ -8,6 +8,6 @@ public class ImpossiblePackDivisionException extends RuntimeException {
 
   public ImpossiblePackDivisionException(int quantity, Product product) {
     super("Not possible to divide the quantity of [" + quantity + "] for the product ]"
-        + product.toString() + "] into package sizes.");
+        + product.getName() + "] into package sizes.");
   }
 }
