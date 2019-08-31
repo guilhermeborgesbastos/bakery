@@ -1,4 +1,4 @@
-package com.gbastos.bakery.tdd;
+package com.gbastos.bakery.tdd.common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,6 @@ import java.util.stream.IntStream;
 import com.gbastos.bakery.model.Pack;
 import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.ProductService;
-import com.gbastos.bakery.tdd.common.IDataLoader;
 
 public class ProductDataLoader implements IDataLoader {
 

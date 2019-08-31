@@ -11,7 +11,7 @@ import com.gbastos.bakery.exception.ProductNotFoundException;
 import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.IOrderService;
 import com.gbastos.bakery.service.OrderService;
-import com.gbastos.bakery.tdd.ProductDataLoader;
+import com.gbastos.bakery.tdd.common.ProductDataLoader;
 
 public class OrderServiceTest {
 

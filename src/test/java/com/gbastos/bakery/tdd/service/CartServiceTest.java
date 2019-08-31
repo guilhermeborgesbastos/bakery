@@ -12,7 +12,7 @@ import com.gbastos.bakery.exception.NullProductException;
 import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.CartService;
 import com.gbastos.bakery.service.ICartService;
-import com.gbastos.bakery.tdd.ProductDataLoader;
+import com.gbastos.bakery.tdd.common.ProductDataLoader;
 
 public class CartServiceTest {
 

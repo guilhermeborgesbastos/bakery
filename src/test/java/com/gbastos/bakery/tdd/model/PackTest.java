@@ -18,7 +18,7 @@ import com.gbastos.bakery.model.Pack;
 import com.gbastos.bakery.model.Product;
 import com.gbastos.bakery.service.IProductService;
 import com.gbastos.bakery.service.ProductService;
-import com.gbastos.bakery.tdd.ProductDataLoader;
+import com.gbastos.bakery.tdd.common.ProductDataLoader;
 
 public class PackTest  {
 
