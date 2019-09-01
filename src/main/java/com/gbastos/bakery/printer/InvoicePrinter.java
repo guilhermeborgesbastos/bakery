@@ -32,7 +32,6 @@ public class InvoicePrinter {
   private void printProductResume(Product product, Integer amount) {
     IProductService productSevice = new ProductService(product);
     Map<Pack, Integer> packs = productSevice.retrievePacksByAmount(amount);
-    writer.println("\n\n##### ORDER RESUME #####");
     writer.printf(PRODUCT_PRINT_FORMAT, amount, product.getCode(), productSevice.calculateTotalCostOfPacks(packs));
 
     packs.entrySet().stream().filter(entry -> entry.getValue() > 0)

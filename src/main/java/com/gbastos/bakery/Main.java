@@ -36,6 +36,7 @@ public class Main {
   }
 
   private static void printBillForCart(ICartService cartService) {
+    System.out.println("\n\n##### ORDER RESUME #####");
     InvoicePrinter bakeryBillPrinter = new InvoicePrinter(cartService, System.out);
     bakeryBillPrinter.printBill();
   }
